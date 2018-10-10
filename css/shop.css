@@ -1,0 +1,154 @@
+#shop_nav{
+	height: 63px;
+    width: 100%;
+    margin-top: 0;
+    color: #616161;
+    border-top:1px solid #ccc;
+	/*box-shadow:5px 5px 5px #ccc;*/
+}
+.shopNav{
+	width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.shopNav h2{
+	font-size: 18px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #212121;
+    float: left;
+}
+.shopNav .shopRight{
+	float: right;
+    margin: 17px 0 0 0;
+}
+.shopNav .shopRight li{
+	float:left;
+}
+.shopNav .shopRight a{
+	color: #616161;
+}
+.shopNav .shopRight a:hover{
+	color:#ff6700
+}
+.shopNav .shopRight span{
+	margin: 0 .25em;
+	color: #e0e0e0;
+}
+
+#content{
+	width:100%;
+}
+#content .content_top{
+	background: #f7f7f7;
+    width: 100%;
+    text-align: center;
+    height: 48px;
+    line-height: 48px;
+    color: #333;
+    box-shadow:0px 5px 5px #ccc inset;
+}
+#content .content_top a{
+	color:#ff6700;
+	padding-left:25px;
+}
+
+#content .contentBox{
+	padding-top: 32px;
+    padding-bottom: 12px;
+    margin:0 auto;
+    width:1226px;
+    height:600px;
+    position: relative;
+}
+.contentBox .contentBox_left{
+	width:560px;
+	height:600px;
+	margin-right:46px;
+	float:left;
+	background: #CCCCCC;
+	background: url(../images/shop_banner.png) no-repeat top left;
+	position: absolute;
+	top:32px;
+}
+.contentBox .contentBox_right{
+	width:606px;
+	height:600px;
+	float:right;
+	margin-left:14px;
+	/*background: red;*/
+	/*overflow-y: auto;*/
+}
+/*.contentBox_right .box{
+	width:606px;
+	height:1200px;
+}*/
+.contentBox_right h2{
+	font-size: 24px;
+    font-weight: normal;
+    color: #212121;
+}
+.contentBox_right p{
+	font-size: 14px;
+	padding-top: 8px;
+    color: #b0b0b0;
+}
+.contentBox_right>span{
+	display: block;
+    font-size: 18px;
+    line-height: 1;
+    color: #ff6700;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 12px 0 20px;
+}
+.sale{
+	padding: 10px 0;
+	height:35px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.sale ul li .sale1{
+	width: 80px;
+	height: 24px;
+    padding: 2px 0;
+    text-align: center;
+    background: #ff6700;
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    display: inline-block;
+}
+.sale ul li b{
+	width: 430px;
+    line-height: 26px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.address{
+	margin-top: 40px;
+    margin-bottom: 40px;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    padding: 30px 40px 30px 32px;
+}
+.address .address-info .item{
+	margin-right: 14px;
+}
+.listOne{
+	margin-left: -6px;
+}
+.listOne>h3{
+	font-size: 18px;
+	line-height: 1;
+}
+.listOne ul li{
+	width:298px;
+	height:44px;
+	float: left;
+	margin-left: 6px;
+    margin-top: 15px;
+    line-height: 42px;
+    height: 42px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    color: #b0b0b0;
+}
