@@ -6,7 +6,7 @@ var index = (function () {
             this.$time3 = document.querySelector('.time3');
             var timer = '';
             this.event();
-            this.setDate('2018/10/9 18:00:00');
+            this.setDate('2018/10/11 18:00:00');
 
         },
         event() {

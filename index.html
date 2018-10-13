@@ -37,7 +37,7 @@
     <div id="top">
         <div class="nav-top">
             <ul class="left_nav">
-                <li><a href="">小米商城</a><span class="sep">|</span></li>
+                <li><a href="index.html">小米商城</a><span class="sep">|</span></li>
 				<li><a href="">MINI</a><span class="sep">|</span></li>
 				<li><a href="">loT</a><span class="sep">|</span></li>
 				<li><a href="">云服务</a><span class="sep">|</span></li>
@@ -99,10 +99,13 @@
                 <li><a href="#">智能硬件</a></li>
             </ul>
             <!--右-->
-            <form class="main_navRight">
+            <div class="main_navRight">
                 <input class="text" type="text" value="">
+                <ul class="search-list">
+         
+                </ul>
                 <input type="submit" class="submit" value="">
-            </form>
+            </div>
         </div>
 					
 		<!--广告-->
@@ -257,8 +260,8 @@
                         <h3>小米8 青春版 4GB+64GB<p>潮流镜面渐变色 2400万自拍旗舰</p><span>1399元</span></h3>
                     </li>
                     <li>
-                        <a href=""><img src="images/2.png" alt=""></a>
-                        <h3>小米8 青春版 4GB+64GB<p>潮流镜面渐变色 2400万自拍旗舰</p><span>1399元</span></h3>
+                        <a href="shop.html"><img src="images/2.png" alt=""></a>
+                        <h3>小米8 屏幕指纹版 8GB+128GB<p>潮流镜面渐变色 2400万自拍旗舰</p><span>3599元</span></h3>
 
                     </li>
                     <li>
@@ -819,14 +822,22 @@
                     </div>
                 </div>
             </div>
-                
         </div>
     </div>
-
+	<ul class="side_nav" style="position: fixed;bottom:100px;right:0;background: white;z-index: 20;">
+            	<li style="background: url(images/icon2.jpg) no-repeat center center;"><p>个人中心</p></li>
+            	<li style="background: url(images/icon1.jpg) no-repeat center center;"><p>联系客服</p></li>
+            	<li style="background: url(images/icon3.jpg) no-repeat center center;"><p>购物车</p></li>
+            	<li class="last_nav" style="background: url(images/icon4.jpg) no-repeat center center white;display: none;"><p>回顶部</p></li>
+    </ul>    
     <script src="js/index.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/swiper-3.4.2.min.js"></script>
+    <script src="js/jsonp.js"></script>
+    <script src="js/input.js"></script>
     <script>
         index.init();
+        xiaomiInput.init('.main_navRight');
         var mySwiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             nextButton: '.swiper-button-next',
@@ -837,6 +848,45 @@
             autoplay: 2500,
             autoplayDisableOnInteraction: false,
             loop: true,
+        })
+        $(function(){
+        	$(".main_navCenter>li").hover(function(){
+	        	$('.first_ul').stop().slideToggle();
+	        })
+        	$('.side_nav>li:nth-child(1)').hover(function(){
+        		$('.side_nav>li:nth-child(1)>p').toggle();
+        	})
+        	$('.side_nav>li:nth-child(2)').hover(function(){
+        		$('.side_nav>li:nth-child(2)>p').toggle();
+        	})
+        	$('.side_nav>li:nth-child(3)').hover(function(){
+        		$('.side_nav>li:nth-child(3)>p').toggle();
+        	})
+        	$('.side_nav>li:nth-child(4)').hover(function(){
+        		$('.side_nav>li:nth-child(4)>p').toggle();
+        	})
+        })
+//      $(function(){
+//           function handler(event) {
+//			    var $target = $(event.target);
+//			    if( $target.is("li") ) {
+//			      $target.children().toggle();
+//			    }
+//			  }
+//			  $("li").hover(handler).find("p").toggle();
+//       })
+        $(function(){
+        	$(window).scroll(function(){
+        		var _height = $(window).scrollTop();
+        		if(_height>800){
+        			$('.last_nav').fadeIn(500);
+        		}else{
+        			$('.last_nav').fadeOut(500);
+        		}
+        	})
+        	$('.last_nav').click(function(){
+        		$('html').animate({scrollTop:0},1000);
+			})
         })
     </script>
 </body>
