@@ -48,29 +48,13 @@ input{outline:none;}
 .first_ul{display: none;z-index: 10;}
 .main_navCenter li a:hover{color: red;}
 /*.main_navCenter .li1:hover .first_ul{display: block}*/
-.main_navRight{width: 297px;height: 100px;float: left;margin-left:62px;}
+.main_navRight{width: 297px;height: 100px;float: left;margin-left:62px;position: relative;}
 .main_navRight .text{width: 243px;height: 48px;margin-top:26px;float: left;border: 1px solid #e0e0e0;position: relative;}
 .main_nav .main_navRight .submit{width: 52px;height:50px;
 	background:url(../images/search_03.png) no-repeat;border: 1px solid #e0e0e0;margin-top:26px;border-left: 0;}
-.search-list {
-        display: none;
-        position: absolute;
-		    top: 237px;
-		    right: 198px;
-		    width: 243px;
-        z-index: 1000;
-      }
-      .search-list > li {
-        color: #000;
-        font: 14px arial;
-        line-height: 22px;
-        padding: 0 8px;
-        background: white;
-        cursor: pointer;
-      }
-      .search-list > li:hover {
-        background-color: #eee;
-      }
+.search-list {display: none;position: absolute;top: 76px;right: 54px;width: 243px;z-index: 1000;}
+.search-list > li {color: #000;font: 14px arial;line-height: 22px;padding: 0 8px;background: white;cursor: pointer;}
+.search-list > li:hover {background-color: #eee;}
 /* banner */
 /* left */
 #banner{width: 1226px;height: 442px;background: #ccc;margin: 0 auto;overflow: hidden;position: relative;}

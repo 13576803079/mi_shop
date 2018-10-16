@@ -148,6 +148,7 @@ $(function() {
 				//					location.href = 'shop_car.html';
 				if(JSON.parse(localStorage.getItem('xiaomi'))) {
 					var arr = JSON.parse(localStorage.getItem('xiaomi'))
+					console.log(arr);
 					var num = 1;
 					var fool;
 					var price = parseInt($('.totle_price').text());
@@ -170,7 +171,6 @@ $(function() {
 								}
 								arr.splice(i, 1, data)
 								arr = JSON.stringify(arr);
-
 								localStorage.setItem('xiaomi', arr);
 								fool = i;
 								break auto;

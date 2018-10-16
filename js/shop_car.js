@@ -41,7 +41,8 @@ $(function() {
 
 			obj = arr[i];
 			console.log(obj)
-			var shopPing = `<div class="shopGoods">
+			console.log(i)
+			var shopPing = `<div class="shopGoods" index="${i}">
 				<div class="shop_check ">
 					<i class="Gou move">√</i>
 				</div>
@@ -123,9 +124,17 @@ $(function() {
 			$('#phoneShap').html(num3);
 
 		})
+		var xiaomi = localStorage.xiaomi || '[]';
+    	xiaomi = JSON.parse(xiaomi);
 		$('.shopGoods').on('click', 'div', function() {
 			var target = $(event.target);
 			if(target.attr('class') == 'shop_action') {
+				console.log(target.parent())
+				console.log(target.parent().index()-2);
+               // 删除数组中对应的数据
+               xiaomi.splice(target.parent().index()-2, 1);
+               // 存入到本地数据库
+               localStorage.xiaomi = JSON.stringify(xiaomi);
 				target.parent().remove()
 				num--;
 				$('#numberShap').html(num);
