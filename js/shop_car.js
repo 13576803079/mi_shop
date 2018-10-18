@@ -131,7 +131,7 @@ $(function() {
 			if(target.attr('class') == 'shop_action') {
 				console.log(target.parent())
 				console.log(target.parent().index()-2);
-               // 删除数组中对应的数据
+               // 删除数组中对应的数据，最外面有两个div同级，索引从2开始
                xiaomi.splice(target.parent().index()-2, 1);
                // 存入到本地数据库
                localStorage.xiaomi = JSON.stringify(xiaomi);
@@ -140,13 +140,24 @@ $(function() {
 				$('#numberShap').html(num);
 				computeShop();
 				getShopnum();
+				if(localStorage.xiaomi == '[]')	{
+					$('main').html('您的购物车是空的');
+					$('main').css({
+						'font-size': '32px',
+						'color': '#000',
+						'text-align': 'center',
+						'line-height': '60px'
+					})
+			
+				}
 			}
 		})
 
 		$('#numberShap').html(num);
 		$('#phoneShap').html(num1);
 
-	} else {
+	} 
+	if(localStorage.xiaomi == '[]')	{
 		$('main').html('您的购物车是空的');
 		$('main').css({
 			'font-size': '32px',
